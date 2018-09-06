@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
+</div>
+
+
+<div>
+  <label>Status Code: </label>
+  <select (change)="filterForeCasts($event.target.value)">
+    <option value="0">100</option>
+    <option *ngFor="let statusCode of statusCodesResponse" value={{statusCode}}>
+      {{statusCode}}
+    </option>
+  </select>
+</div>
+
+<p><b>HTTP Status Code:</b> {{ statusCodeResponse?.statusCode }} </p>
+<p><b>Short Description:</b> {{ statusCodeResponse?.shortDescription }}</p>
+<p><b>Long Description:</b> {{ statusCodeResponse?.longDescription }}</p>
+<p><b>RFC Link:</b> {{ statusCodeResponse?.rfcUri }}</p>
