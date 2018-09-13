@@ -6,17 +6,15 @@
 </div>
 
 
-<div>
-  <label>Status Code: </label>
-  <select (change)="filterForeCasts($event.target.value)">
-    <option value="0">100</option>
-    <option *ngFor="let statusCode of statusCodesResponse" value={{statusCode}}>
-      {{statusCode}}
+<div class="container">
+  <label><b>HTTP Status Code: </b></label>
+  <select (change)="changeStatusCode($event.target.value)">
+    <option *ngFor="let statusCode of statusCodesResponse" value={{statusCode.statusCode}}>
+      {{statusCode.statusCode}}
     </option>
   </select>
-</div>
 
-<p><b>HTTP Status Code:</b> {{ statusCodeResponse?.statusCode }} </p>
 <p><b>Short Description:</b> {{ statusCodeResponse?.shortDescription }}</p>
 <p><b>Long Description:</b> {{ statusCodeResponse?.longDescription }}</p>
-<p><b>RFC Link:</b> {{ statusCodeResponse?.rfcUri }}</p>
+<p><b>RFC Link:</b> <a href="{{ statusCodeResponse?.rfcUri }}">{{ statusCodeResponse?.rfcUri }}</a></p>
+</div>
