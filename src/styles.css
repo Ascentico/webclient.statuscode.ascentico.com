@@ -1,13 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
-body {font-family: Arial, Helvetica, sans-serif;}
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
 
-label {
-  display: inline-block;
-  width: 160px;
+html,
+body {
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 15px;
+  line-height: 1.428571429;
+  color: #222;
+  background-color: #fff;
+  height: 100%;
 }
 
-div.container {
-  border: 1px solid black;
-  padding: 2%;
-  width: 80%;
+.gitlink {
+  overflow: hidden;
+  border: none;
+}
+
+.mast {
+  padding: 8em 0 3em;
+  background-color: #1c2533;
+  background: -webkit-linear-gradient(70deg, #080f1f 30%, #2b4b5a 87%, #435e67 100%);
+  background: -o-linear-gradient(70deg, #080f1f 30%, #2b4b5a 87%, #435e67 100%);
+  background: -ms-linear-gradient(70deg, #080f1f 30%, #2b4b5a 87%, #435e67 100%);
+  background: -moz-linear-gradient(70deg, #080f1f 30%, #2b4b5a 87%, #435e67 100%);
+  background: linear-gradient(20deg, #080f1f 30%, #2b4b5a 87%, #435e67 100%);
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+}
+
+h1.mast-text,
+h1.tagline {
+  font-size: 58px;
+}
+
+h1.mast-text {
+  font-weight: 500;
+}
+
+.gitlinks {
+  margin-top: 2em;
 }

@@ -1,9 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
+import {StatusCodeService} from './service/statuscode.service';
 
 
 @NgModule({
@@ -12,9 +14,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
-  providers: [],
+  providers: [StatusCodeService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
